@@ -1,1 +1,1 @@
-{"version":2,"defects":{"CalculatorTest::testAddition":8,"CardTest::testCardParsing":8},"times":{"CalculatorTest::testAddition":0,"CardTest::testCardParsing":0.001}}
+{"version":2,"defects":{"CalculatorTest::testAddition":8,"CardTest::testCardParsing":8,"HandTest::testIdentifyHighCard":7,"HandTest::testWheelStraightBeatsHighCard":7},"times":{"CalculatorTest::testAddition":0,"CardTest::testCardParsing":0.001,"HandTest::testIdentifyHighCard":0.002,"HandTest::testWheelStraightBeatsHighCard":0.001,"HandTest::testHandCreation":0.001}}
