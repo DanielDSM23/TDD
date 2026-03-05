@@ -1,0 +1,18 @@
+{
+    "autoload": {
+        "psr-4": {
+        "App\\": "src/"
+        }
+    },
+    "name": "daniel/tdd",
+    
+    "require": {
+        "phpunit/phpunit": "^12.5"
+    },
+    "authors": [
+        {
+            "name": "Daniel MONTEIRO",
+            "email": "101821091+DanielDSM23@users.noreply.github.com"
+        }
+    ]
+}
