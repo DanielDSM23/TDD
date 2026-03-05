@@ -104,16 +104,16 @@ class HandEvaluator
         );
     }
 
-    private static function straightHigh(array $ranks): int|false
+    private static function straightHigh(array $ranks)
     {
-        $ranks = array_unique($ranks);
+        $ranks = array_map('intval', array_unique($ranks));
         sort($ranks);
 
-        if ($ranks === [2,3,4,5,14]) {
+        if ($ranks === [2, 3, 4, 5, 14]) {
             return 5;
         }
 
-        if (count($ranks)==5 && $ranks[4]-$ranks[0]==4) {
+        if (count($ranks) === 5 && ($ranks[4] - $ranks[0] === 4)) {
             return $ranks[4];
         }
 

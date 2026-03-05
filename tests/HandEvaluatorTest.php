@@ -20,4 +20,25 @@ class HandEvaluatorTest extends TestCase {
         $this->assertEquals("Flush", $result->category);
     }
 
+    public function testDetermineBestFiveCardsFromSeven()
+    {
+        $board = ["Jh","8h","4h","3h","2h"];
+
+        $hand = new Hand(
+            [], 
+            $board
+        );
+
+        $result = HandEvaluator::evaluate($hand);
+
+        $this->assertEquals("Flush", $result->category);
+
+        $this->assertCount(5, $result->cards);
+
+        $ranks = array_map(fn($c) => $c->rank, $result->cards);
+        sort($ranks);
+
+        $this->assertEquals([2, 3, 4, 8, 11], $ranks);
+    }
+
 }
