@@ -1,1 +1,1 @@
-{"version":2,"defects":{"CalculatorTest::testAddition":8},"times":{"CalculatorTest::testAddition":0}}
+{"version":2,"defects":{"CalculatorTest::testAddition":8,"CardTest::testCardParsing":8},"times":{"CalculatorTest::testAddition":0,"CardTest::testCardParsing":0.001}}
