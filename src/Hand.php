@@ -1,17 +1,28 @@
 <?php
 
 namespace App;
-use App\EvaluatedHand;
 
 class Hand {
 
     /** @var Card[] */
-    public array $cards = [];
+    public array $holeCards = [];
 
-    public function __construct(array $cardStrings)
+    /** @var Card[] */
+    public array $boardCards = [];
+
+    public function __construct(array $holeCards, array $boardCards)
     {
-        foreach ($cardStrings as $cardStr) {
-            $this->cards[] = new Card($cardStr);
+        foreach ($holeCards as $c) {
+            $this->holeCards[] = new Card($c);
         }
+
+        foreach ($boardCards as $c) {
+            $this->boardCards[] = new Card($c);
+        }
+    }
+
+    public function getAllCards(): array
+    {
+        return array_merge($this->holeCards, $this->boardCards);
     }
 }
